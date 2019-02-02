@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blossoms</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="img/favicon.ico">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Kaushan+Script" rel="stylesheet">
+     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+    </head>
+<body>
+    
+    <!--header-->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg px-4">
+            <a href="#" class="navbar-brand">
+                <img src="img/icon.png" height= 60px width= 60px alt="flower">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="toggler-icon">
+                      <i class="fas fa-bars"></i>
+                  </span> 
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav text-capitalize mx-auto">
+                    <li class="nav-item active">
+                        <a href="#header" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#store" class="nav-link">store</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#services" class="nav-link">services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#cakes" class="nav-link">order</a>
+                    </li>
+                </ul>
+                <div class="nav-info-items d-none d-lg-flex">
+                    <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                        <span class="info-icon mx-lg-3">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                        <p class="mb-0">+ 123 456 789</p>
+                    </div>
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <span class="cart-info__icon mr-lg-3">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                        <p class="mb-0 text-capitalize">
+                        <span id="item-count">2</span>
+                          items - Rs.
+                        <span class="item-total">
+                          1050.00       
+                        </p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+   <!--banner-->
+   <div class="container-fluid">
+      <div class="row max-height justify-content-center align-items-center">
+        <div class="col-10 mx-auto banner text-center">
+            <h1 class="text-capitalize">welcome to <strong class="banner-title">blossoms</strong></h1>
+             <a href="#store" class="btn btn-order btn-outline-secondary text-uppercase">order a bouquet</a>
+        </div>
+      </div>
+   </div>
+<!--end of banner-->
+</header>
+<!--end of header-->
+
+<!--about-->
+<section class="about py-5" id="about">
+  <div class="container">
+      <div class="row">
+          <div class="col-10 mx-auto col-md-6 my-5">
+              <h1 class="text-capitalize">about <strong class="banner-title">us</strong></h1>
+              <p class="my-4 text-muted w-75">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquid necessitatibus suscipit. Explicabo, dolorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, omnis.
+              </p>
+              <a href="#" class="btn btn-black btn-outline-secondary text-uppercase">explore</a>
+          </div>
+          <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+              <div class="about-img__container">
+                  <img src="img/flower.jpg" class="img-fluid" alt="flowers">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--end of about-->
+<!--store section-->
+<section id="store" class="store py-5">
+    <div class="container">
+        <!--section title-->
+        <div class="row">
+            <div class="col-10 mx-auto col-sm-6 text-center">
+                <h1 class="text-capitalize">our <strong class="banner-title">store</strong></h1>
+            </div>
+        </div>
+        <!--end of section title-->
+        <!--filter buttons-->
+        <div class="row">
+            <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+             <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">all</a>
+             <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">roses</a>
+             <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">tulips</a>
+             <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">bouquets</a>
+             <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">loose flowers</a>
+            </div>
+        </div>
+        <br>
+    
+        <!--end of filter buttons-->
+        <!--search box-->
+        <div class="row">
+            <div class="col-10 mx-auto col-md-6">
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text search-box" id="search-icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="item..." id="search-item">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--end of search box-->
+        <!--store items-->
+        <div class="row store-items" id="store-items">
+            <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+              <div class="card single-item">
+                  <div class="img-container">
+                      <img src="img/bouquet.jpg" class="card-img-top store-img" alt="bouquet">
+                      <span class="store-item-icon">
+                          <i class="fas fa-shopping-cart"></i>
+                      </span>
+                  </div>
+                  <div class="card-body">
+                      <div class="card-text d-flex justify-content-between text-capitalize">
+                          <h5 id="store-item-name">flower bouquet</h5>
+                          <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">100.00</strong></h5>
+                      </div>
+                  </div>
+              </div>
+        </div>
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/bouquet2.jpg" class="card-img-top store-img" alt="bouquet">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">flower arrangement</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">100.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/bouquet1.jpeg" class="card-img-top store-img" alt="bouquet">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">pink daisies</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">100.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/sunflower.jpg" class="card-img-top store-img" alt="sunflower">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">sunflowers</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">250.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/orchid1.jpg" class="card-img-top store-img" alt="orchid">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">orchids</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">250.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/whitetulips.jpg" class="card-img-top store-img" alt="whitetulips">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">White tulips</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">250.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/basket1.jpg" class="card-img-top store-img" alt="flower-basket">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">assorted flower basket</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                        </div>
+                    </div>
+              </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/bouquet3.jpg" class="card-img-top store-img" alt="bouquet">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">white flower basket</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="img/rose2.jpg" class="card-img-top store-img" alt="rose">
+                        <span class="store-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">multi color tulips</h5>
+                            <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+            <div class="card single-item">
+                <div class="img-container">
+                    <img src="img/basket.jpg" class="card-img-top store-img" alt="basket">
+                    <span class="store-item-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">rose flowers</h5>
+                        <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+            <div class="card single-item">
+                <div class="img-container">
+                    <img src="img/orchid.jpg" class="card-img-top store-img" alt="orchids">
+                    <span class="store-item-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">orchids</h5>
+                        <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+            <div class="card single-item">
+                <div class="img-container">
+                    <img src="img/basket2.jpg" class="card-img-top store-img" alt="basket">
+                    <span class="store-item-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">rose basket</h5>
+                        <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+            <div class="card single-item">
+                <div class="img-container">
+                    <img src="img/tulip.jpg" class="card-img-top store-img" alt="tulip">
+                    <span class="store-item-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">tulip vase</h5>
+                        <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+            <div class="card single-item">
+                <div class="img-container">
+                    <img src="img/rose3.jpg" class="card-img-top store-img" alt="rose">
+                    <span class="store-item-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">bouquet of roses</h5>
+                        <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item flowers" data-item="flowers">
+            <div class="card single-item">
+                <div class="img-container">
+                    <img src="img/color.jpg" class="card-img-top store-img" alt="color">
+                    <span class="store-item-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">assorted flowers</h5>
+                        <h5 class="store-item-value">Rs. <strong id="store-item-price" class="font-weight-bold">500.00</strong></h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <!--end of store items-->
+    </div>
+</section>
+<!--end of store section-->
+<!--services-->
+<section id="services" class="services py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center my-3">
+                <img src="img/flowericon.png" height= 60px width= 60px alt="flower icon"> 
+                <h6 class="text-uppercase my-3 service-title">bouquets</h6>
+                <p class="w-75 mx-auto text-left service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam reprehenderit ab soluta quis cum assumenda impedit, possimus quasi eos</p>
+            </div>
+            <div class="col-md-4 text-center my-3">
+                    <img src="img/postcard.png" height= 60px width= 60px alt="postcard icon">
+                    <h6 class="text-uppercase my-3 service-title">postcards</h6>
+                    <p class="w-75 mx-auto text-left service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam reprehenderit ab soluta quis cum assumenda impedit, possimus quasi eos</p>
+            </div>
+            <div class="col-md-4 text-center my-3">
+                    <img src="img/gifticon.png" height= 60px width= 60px alt="gift icon">
+                    <h6 class="text-uppercase my-3 service-title">wrapping</h6>
+                    <p class="w-75 mx-auto text-left service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam reprehenderit ab soluta quis cum assumenda impedit, possimus quasi eos</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of services-->
+<!--flowers-->
+<section id="flowers" class="flowers py-5">
+    <div class="container">
+      <!--section title-->
+      <div class="row">
+            <div class="col-10 mx-auto col-sm-6 text-center">
+                <h1 class="text-capitalize">free <strong class="banner-title">delivery*</strong></h1>
+            </div>
+      </div>
+      <!--end of section title-->   
+      <div class="row">
+            <div class="col-11 mx-auto-md-6 col-lg-4 my-4 text-capitalize text-center">
+              <h3 class="py-3">free delivery during day time</h3>
+                <div class="text-muted">
+                  <p class="my-3">Lorem ipsum dolor, sit amet</p>
+                  <p class="my-3">Lorem, ipsum.</p>
+                  <p class="my-3">ipsum dolor.</p>
+                  <p class="my-3">Lorem ipsum dolor sit.</p>
+                  <button type="button" class="btn btn-pink text-capitalize mb-3">order now</button>
+                  <p><img src="img/sunicon.png" class="img-fluid free-delivery" alt="daytime"></p>
+                </div>
+            </div>
+            <div class="col-11 mx-auto-md-6 col-lg-4 my-4 text-capitalize text-center">
+              <h3 class="py-3">for orders from Rs. 500 or above</h3>
+                <div class="text-muted">
+                  <p class="my-3">Lorem ipsum dolor sit.</p>
+                  <p class="my-3">Lorem, ipsum.</p>
+                  <p class="my-3">ipsum dolor</p>
+                  <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                  <button type="button" class="btn btn-pink text-capitalize mb-3">order now</button>
+                  <p><img src="img/pigicon.png" class="img-fluid free-delivery" alt="money"></p>
+                </div>
+            </div>
+            <div class="col-11 mx-auto-md-6 col-lg-4 my-4 text-capitalize text-center">
+              <h3 class="py-3">within the city<br>(no suburbs)</h3>
+                <div class="text-muted">
+                  <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                  <p class="my-3">Lorem, ipsum.</p>
+                  <p class="my-3">ipsum dolor.</p> 
+                  <p class="my-3">Lorem ipsum dolor sit.</p>
+                  <button type="button" class="btn btn-pink text-capitalize mb-3">order now</button>
+                  <p><img src="img/locationicon.png" class="img-fluid free-delivery" alt="location"></p>
+                </div>
+            </div>
+      </div>
+    </div>
+</section>
+<!--end of flowers-->
+ <!--footer-->
+ <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 footer-title py-5">
+            <h1 class="text-capitalize text-center">
+                <strong class="banner-title">blossoms</strong>
+            </h1>
+            <div class="footer-icons mt-3 d-flex justify-content-around flex-wrap">
+              <a href="#" class="footer-icon">
+                 <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="footer-icon">
+                 <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="footer-icon">
+                 <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="footer-icon">
+                 <i class="fab fa-google-plus"></i>
+              </a>
+            </div>
+        </div>
+        <div class="col-md-6 footer-contact text-center p-5">
+            <h3 class="mb-5">Contact</h3>
+            <p class="d-flex flex-wrap">
+                <span class="mr-4 footer-icon">
+                    <i class="fas fa-map"></i>
+                </span>
+                <span>
+                    123 Street, Rainbow Colony 505001
+                </span>
+            </p>
+            <p class="d-flex flex-wrap">
+                <span class="mr-4 footer-icon">
+                    <i class="fas fa-phone"></i>
+                </span>
+                <span>
+                    + 123-456-789
+                </span>
+            </p>
+            <p class="d-flex flex-wrap">
+                <span class="mr-4 footer-icon">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span>
+                    email@email.com
+                </span>
+            </p>
+        </div>
+      </div>
+    </div>
+</footer>
+<!--end of footer title-->
+<!--jquery--> 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--script js-->
+<script src="script.js"></script>
+</body>
+</html>
